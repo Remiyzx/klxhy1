@@ -9,20 +9,23 @@
         @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
         :root {
-            --primary: #1d4ed8;        /* Royal Blue */
-            --primary-dark: #1e40af;   /* Dark Navy Blue */
-            --primary-light: #dbeafe;  /* Soft Blue Tint */
-            --topbar-bg: #0f172a;      /* Slate 900 */
-            --topbar-hover: #1e293b;    /* Slate 800 */
-            --topbar-active: #2563eb;   /* Bright Accent Blue */
-            --bg-color: #f8fafc;       /* Off-white/Blue Tint Background */
-            --text-color: #1e293b;     /* High contrast Dark Charcoal */
+            /* Multi-Shade Elegant Blue Palette */
+            --navy-dark: #0f172a;        /* Midnight Navy for Topbar Header */
+            --navy-menu: #1e293b;        /* Deep Slate Navy for Menu Bar */
+            --sapphire-dark: #1e3a8a;    /* Rich Dark Sapphire for Key Titles */
+            --royal-primary: #1d4ed8;    /* Royal Blue Primary Accent */
+            --cobalt-bright: #2563eb;    /* Bright Cobalt for Buttons/Highlights */
+            --sky-badge: #0284c7;        /* Sky Blue for Badges */
+            --ice-bg: #f0f7ff;           /* Ice Blue Tint for Cards & Formulas */
+            --soft-border: #bfdbfe;      /* Soft Sky Blue Borders */
+            --bg-color: #f8fafc;         /* Off-white Page Canvas */
+            --text-dark: #0f172a;        /* High-contrast Charcoal Text */
             
-            /* Keyword & Category Colors */
-            --kw-initial: #0284c7;     /* Sky/Ocean Blue */
-            --kw-final: #059669;       /* Emerald Green */
-            --kw-tone: #7c3aed;        /* Royal Purple */
-            --kw-rule: #d97706;        /* Warm Amber */
+            /* Keyword Accents */
+            --kw-initial: #0284c7;       /* Ocean Blue */
+            --kw-final: #059669;         /* Emerald Green */
+            --kw-tone: #7c3aed;          /* Deep Purple */
+            --kw-rule: #d97706;          /* Warm Amber */
         }
         
         body {
@@ -30,7 +33,7 @@
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-dark);
             font-size: 20px; /* Boosted Base Font Size for Classroom Projection */
             line-height: 1.75;
         }
@@ -40,22 +43,23 @@
             font-family: 'Andika', 'STKaiti', 'Kaiti', 'Century Gothic', sans-serif !important;
         }
 
-        /* Top Navigation Bar */
+        /* Top Navigation Bar with Deep Layered Navy */
         .top-nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: var(--topbar-bg);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            background-color: var(--navy-menu);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.25);
         }
 
         .top-nav-header {
             padding: 12px 30px;
-            background-color: var(--primary-dark);
+            background: linear-gradient(90deg, #0b192c 0%, #1e3a8a 100%);
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .top-nav-header h2 {
@@ -68,7 +72,7 @@
 
         .top-nav-header span {
             font-size: 1.1rem;
-            color: #dbeafe;
+            color: #93c5fd;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
@@ -76,15 +80,15 @@
         .menu-bar {
             display: flex;
             flex-wrap: wrap;
-            background-color: var(--topbar-bg);
+            background-color: var(--navy-menu);
             justify-content: center;
         }
 
         .menu-btn {
-            padding: 14px 20px;
+            padding: 14px 22px;
             border: none;
             background: none;
-            color: #ecf0f1;
+            color: #cbd5e1;
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
@@ -96,13 +100,13 @@
         }
 
         .menu-btn:hover {
-            background-color: var(--topbar-hover);
+            background-color: #334155;
             color: #ffffff;
         }
 
         .menu-btn.active {
-            background-color: var(--topbar-hover);
-            border-bottom: 4px solid var(--topbar-active);
+            background-color: #334155;
+            border-bottom: 4px solid var(--cobalt-bright);
             color: #60a5fa;
         }
 
@@ -118,9 +122,10 @@
             animation: fadeIn 0.4s ease-in-out;
             background: white;
             padding: 40px 45px;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+            border-radius: 14px;
+            box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.06);
             margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
         }
 
         .section.active {
@@ -134,9 +139,9 @@
 
         /* Page Indicator Badges */
         .page-badge {
-            background-color: #2563eb;
+            background-color: var(--sky-badge);
             color: white;
-            padding: 4px 12px;
+            padding: 4px 14px;
             border-radius: 14px;
             font-size: 0.8em;
             font-weight: bold;
@@ -144,43 +149,44 @@
             display: inline-block;
             vertical-align: middle;
             letter-spacing: 0.5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
         }
 
-        /* Hero Banner in Blue */
+        /* Hero Banner in Deep Elegant Sapphire-Cobalt Gradient */
         .hero-banner {
             text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-            border-radius: 12px;
-            border: 2px solid #bfdbfe;
+            padding: 35px 25px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+            border-radius: 14px;
+            color: white;
             margin-bottom: 35px;
+            box-shadow: 0 10px 20px -3px rgba(29, 78, 216, 0.25);
         }
 
         .hero-banner h1 {
             font-size: 3.2rem;
-            color: var(--primary-dark);
+            color: #ffffff;
             margin: 0;
             border: none;
             padding: 0;
             letter-spacing: 1.5px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.03);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero-banner p {
             font-size: 1.35rem;
-            color: #1e3a8a;
-            margin: 8px 0 0 0;
+            color: #bfdbfe;
+            margin: 10px 0 0 0;
             font-weight: 600;
             letter-spacing: 1px;
         }
 
         /* Headings for Classroom Display */
         h1 { 
-            color: var(--primary); 
+            color: var(--sapphire-dark); 
             font-size: 2.3rem; 
             margin-top: 0; 
-            border-bottom: 3px solid #f1f5f9; 
+            border-bottom: 3px solid #e2e8f0; 
             padding-bottom: 12px; 
             display: flex;
             align-items: center;
@@ -195,6 +201,7 @@
 
         h3 { 
             font-size: 1.45rem; 
+            color: var(--sapphire-dark);
         }
 
         /* High Visibility Pinyin Highlights */
@@ -203,13 +210,13 @@
         .kw-tone { color: var(--kw-tone); font-weight: bold; }
         
         .kw-pinyin { 
-            background-color: #eff6ff; 
+            background-color: var(--ice-bg); 
             padding: 3px 10px; 
             border-radius: 6px; 
             font-size: 1.25em; 
-            color: var(--primary-dark); 
+            color: var(--sapphire-dark); 
             font-weight: bold;
-            border: 1px solid #bfdbfe;
+            border: 1px solid var(--soft-border);
             font-family: 'Andika', 'STKaiti', sans-serif;
         }
 
@@ -229,31 +236,31 @@
         }
         
         th {
-            background-color: #eff6ff;
+            background-color: #e0f2fe;
             color: #1e3a8a;
             font-weight: bold;
             font-size: 1.2rem;
         }
 
         tr:nth-child(even) { background-color: #f8fafc; }
-        tr:hover { background-color: #f1f5f9; }
+        tr:hover { background-color: var(--ice-bg); }
 
         /* Highlight Callout Boxes */
         .warning-box {
-            background-color: #fefce8;
-            border-left: 6px solid #eab308;
+            background-color: #fffbeb;
+            border-left: 6px solid #f59e0b;
             padding: 20px;
             margin: 25px 0;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1.15rem;
         }
 
         .dramatic-box {
-            background-color: #eff6ff;
-            border-left: 6px solid #2563eb;
+            background-color: var(--ice-bg);
+            border-left: 6px solid var(--cobalt-bright);
             padding: 20px;
             margin: 25px 0;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1.2rem;
         }
 
@@ -262,24 +269,24 @@
             text-align: center;
             margin: 35px 0;
             padding: 25px;
-            background: #eff6ff;
-            border-radius: 10px;
-            border: 2px solid #bfdbfe;
+            background: var(--ice-bg);
+            border-radius: 12px;
+            border: 2px solid var(--soft-border);
         }
 
         /* Rule Cards & Exercise Cards */
         .rule-card, .exercise-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 28px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border-top: 6px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.04);
+            border-top: 6px solid var(--royal-primary);
         }
         
         .exercise-card {
-            border-top: 6px solid var(--kw-initial);
+            border-top: 6px solid var(--sky-badge);
         }
 
         .rule-card h3, .exercise-card h3 {
@@ -287,17 +294,17 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #0f172a;
+            color: var(--sapphire-dark);
         }
 
         .rule-formula {
-            background: #f1f5f9;
+            background: var(--ice-bg);
             padding: 14px 20px;
             border-radius: 8px;
             text-align: center;
             font-size: 1.3em;
             margin: 15px 0;
-            border: 1px solid #cbd5e1;
+            border: 1px solid var(--soft-border);
             font-family: 'Andika', monospace;
         }
 
@@ -322,7 +329,7 @@
         }
 
         .flow-arrow {
-            color: var(--primary);
+            color: var(--royal-primary);
             font-weight: bold;
         }
 
@@ -341,14 +348,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(90deg, #1d4ed8, #0284c7);
+            background: linear-gradient(90deg, #1e3a8a, #0284c7);
             padding: 16px 28px;
             border-radius: 40px;
             color: white;
             font-weight: bold;
             font-size: 1.4em;
             margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(29, 78, 216, 0.25);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
             font-family: 'Andika', sans-serif;
         }
 
@@ -409,10 +416,10 @@
         }
 
         .reveal-btn {
-            background-color: var(--primary);
+            background-color: var(--royal-primary);
             color: white;
             border: none;
-            padding: 8px 18px;
+            padding: 8px 20px;
             border-radius: 20px;
             font-size: 0.95rem;
             font-weight: bold;
@@ -422,18 +429,18 @@
         }
 
         .reveal-btn:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--sapphire-dark);
         }
 
         .answer-box {
             display: none;
             margin-top: 14px;
             padding: 12px 18px;
-            background-color: #eff6ff;
-            border-left: 5px solid var(--primary);
+            background-color: var(--ice-bg);
+            border-left: 5px solid var(--royal-primary);
             border-radius: 6px;
             font-size: 1.1rem;
-            color: var(--primary-dark);
+            color: var(--sapphire-dark);
             font-weight: bold;
             animation: fadeIn 0.3s ease;
         }
@@ -447,15 +454,16 @@
             color: white;
             text-decoration: none;
             padding: 14px 28px;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: bold;
             font-size: 1.15rem;
             margin: 10px 12px 10px 0;
             transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .resource-link { background-color: var(--primary); }
-        .resource-link:hover { background-color: var(--primary-dark); }
-        .hw-link { background-color: #0284c7; }
+        .resource-link { background-color: var(--royal-primary); }
+        .resource-link:hover { background-color: var(--sapphire-dark); }
+        .hw-link { background-color: var(--sky-badge); }
         .hw-link:hover { background-color: #0369a1; }
         
         .center { text-align: center; }
@@ -472,21 +480,21 @@
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation Bar (No Serial Numbers in Menu Bar) -->
     <div class="top-nav">
         <div class="top-nav-header">
             <h2>LESSON 1: THE PHONETICS OF CHINESE</h2>
             <span>Teaching Notes</span>
         </div>
         <div class="menu-bar">
-            <button class="menu-btn active" onclick="showSection('intro', this)">1. Intro</button>
-            <button class="menu-btn" onclick="showSection('tones', this)">2. Four Tones</button>
-            <button class="menu-btn" onclick="showSection('initials', this)">3. Initials (21)</button>
-            <button class="menu-btn" onclick="showSection('finals', this)">4. Finals (36)</button>
-            <button class="menu-btn" onclick="showSection('break', this)">5. Break & Attendance</button>
-            <button class="menu-btn" onclick="showSection('rules', this)">6. Spelling Rules</button>
-            <button class="menu-btn" onclick="showSection('exercises', this)">7. In-Class Exercises</button>
-            <button class="menu-btn" onclick="showSection('resources', this)">8. Homework & Review</button>
+            <button class="menu-btn active" onclick="showSection('intro', this)">Intro</button>
+            <button class="menu-btn" onclick="showSection('tones', this)">Four Tones</button>
+            <button class="menu-btn" onclick="showSection('initials', this)">Initials (21)</button>
+            <button class="menu-btn" onclick="showSection('finals', this)">Finals (36)</button>
+            <button class="menu-btn" onclick="showSection('break', this)">Break & Attendance</button>
+            <button class="menu-btn" onclick="showSection('rules', this)">Spelling Rules</button>
+            <button class="menu-btn" onclick="showSection('exercises', this)">Exercises</button>
+            <button class="menu-btn" onclick="showSection('resources', this)">Homework & Review</button>
         </div>
     </div>
 
@@ -516,7 +524,7 @@
                 <li><span class="kw-tone">Tone</span>: One of the 4 tones (or neutral tone) placed on the main vowel.</li>
             </ul>
             
-            <div class="center" style="margin: 40px 0; font-size: 2rem; background: #f8fafc; padding: 25px; border-radius: 10px; border: 2px dashed #cbd5e1;">
+            <div class="center" style="margin: 40px 0; font-size: 2rem; background: var(--ice-bg); padding: 25px; border-radius: 12px; border: 2px dashed var(--soft-border);">
                 <span class="kw-initial pinyin-font">n</span> + <span class="kw-final pinyin-font">i</span> + <span class="kw-tone pinyin-font">ˇ</span> = <span class="kw-pinyin">nǐ</span>
             </div>
         </div>
@@ -577,7 +585,7 @@
 
             <!-- SVG 5-Point Tone Scale Diagram -->
             <div class="tone-chart-container">
-                <h3 style="margin-top:0; color: #1e293b; font-size: 1.5rem;">5-Point Pitch Scale Chart</h3>
+                <h3 style="margin-top:0; font-size: 1.5rem;">5-Point Pitch Scale Chart</h3>
                 <svg viewBox="0 0 400 260" style="max-width: 520px; width: 100%; display: block; margin: 0 auto;">
                     <defs>
                         <marker id="arrow-blue1" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/></marker>
@@ -717,18 +725,18 @@
                 </tr>
 
                 <!-- Sibilant -->
-                <tr style="background-color: #eff6ff;">
+                <tr style="background-color: var(--ice-bg);">
                     <td><span class="kw-pinyin">z</span></td>
                     <td rowspan="3"><strong>Sibilant (Tongue tip)</strong><br><em>*Teeth closed</em></td>
                     <td>BI - ki<strong>ds</strong></td>
                     <td><span class="kw-pinyin">zū</span> (to rent)</td>
                 </tr>
-                <tr style="background-color: #eff6ff;">
+                <tr style="background-color: var(--ice-bg);">
                     <td><span class="kw-pinyin">c</span></td>
                     <td>BI - ca<strong>ts</strong></td>
                     <td><span class="kw-pinyin">cí</span> (word)</td>
                 </tr>
-                <tr style="background-color: #eff6ff;">
+                <tr style="background-color: var(--ice-bg);">
                     <td><span class="kw-pinyin">s</span></td>
                     <td>BI - <strong>s</strong>peak</td>
                     <td><span class="kw-pinyin">sì</span> (four)</td>
@@ -794,9 +802,9 @@
             </table>
 
             <!-- Simple Finals + 5 Tones Practice Table -->
-            <div style="background: #eff6ff; border: 2px solid #bfdbfe; border-radius: 10px; padding: 20px; margin: 25px 0;">
-                <h3 style="margin-top: 0; color: #1e40af;">🗣️ Master Practice: Simple Finals + All 5 Tones <span class="page-badge">KLXHY pg 3-4</span></h3>
-                <p style="font-size: 1.1rem; color: #1d4ed8;">Practice reading each simple final aloud across all five tone pitches:</p>
+            <div style="background: var(--ice-bg); border: 2px solid var(--soft-border); border-radius: 10px; padding: 20px; margin: 25px 0;">
+                <h3 style="margin-top: 0; color: var(--sapphire-dark);">🗣️ Master Practice: Simple Finals + All 5 Tones <span class="page-badge">KLXHY pg 3-4</span></h3>
+                <p style="font-size: 1.1rem; color: var(--royal-primary);">Practice reading each simple final aloud across all five tone pitches:</p>
                 
                 <table style="background: white; font-size: 1.25em; text-align: center;">
                     <tr style="background: #e2e8f0;">
@@ -869,53 +877,22 @@
             </table>
         </div>
 
-        <!-- Section 5: Break & Attendance -->
+        <!-- Section 5: Break & Attendance (Text Only Display) -->
         <div id="break" class="section">
-            <div class="hero-banner" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-color: #bfdbfe;">
-                <h1 style="color: var(--primary-dark);">🍵 Class Break & Attendance Check</h1>
-                <p style="color: #1e3a8a;">Time to rest your mind and stretch!</p>
+            <div class="hero-banner">
+                <h1>🍵 Class Break & Attendance Check</h1>
+                <p>Time to rest your mind and stretch!</p>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin: 30px 0;">
-                
+            <div style="max-width: 650px; margin: 30px auto;">
                 <!-- Rest Tips Box -->
-                <div style="flex: 1 1 320px; background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 25px;">
-                    <h3 style="margin-top: 0; color: var(--primary-dark);">💡 Mid-Class Break Rules:</h3>
-                    <ul style="line-height: 2; font-size: 1.15rem; margin-bottom: 0;">
+                <div style="background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                    <h3 style="margin-top: 0; color: var(--sapphire-dark);">💡 Mid-Class Break Rules:</h3>
+                    <ul style="line-height: 2.2; font-size: 1.2rem; margin-bottom: 0;">
                         <li>💧 Grab a glass of water & stretch your back!</li>
                         <li>👀 Give your eyes a short break from the screen.</li>
                     </ul>
                 </div>
-
-                <!-- QR Code Display Box -->
-                <div style="flex: 0 0 300px; text-align: center; background: white; border: 3px dashed var(--primary); border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary); margin-bottom: 15px;">📱 ATTENDANCE QR CODE</div>
-                    
-                    <!-- SVG Visual Placeholder for Classroom QR Code -->
-                    <div style="width: 200px; height: 200px; margin: 0 auto; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px solid #cbd5e1;">
-                        <svg width="150" height="150" viewBox="0 0 100 100" fill="#0f172a">
-                            <!-- QR Code Visual Pattern -->
-                            <rect x="10" y="10" width="25" height="25" fill="#0f172a"/>
-                            <rect x="15" y="15" width="15" height="15" fill="#ffffff"/>
-                            <rect x="18" y="18" width="9" height="9" fill="#0f172a"/>
-                            
-                            <rect x="65" y="10" width="25" height="25" fill="#0f172a"/>
-                            <rect x="70" y="15" width="15" height="15" fill="#ffffff"/>
-                            <rect x="73" y="18" width="9" height="9" fill="#0f172a"/>
-                            
-                            <rect x="10" y="65" width="25" height="25" fill="#0f172a"/>
-                            <rect x="15" y="70" width="15" height="15" fill="#ffffff"/>
-                            <rect x="18" y="73" width="9" height="9" fill="#0f172a"/>
-                            
-                            <rect x="40" y="15" width="12" height="12" fill="#0f172a"/>
-                            <rect x="40" y="40" width="20" height="20" fill="#0f172a"/>
-                            <rect x="65" y="65" width="15" height="15" fill="#0f172a"/>
-                            <rect x="75" y="45" width="10" height="10" fill="#0f172a"/>
-                            <rect x="45" y="75" width="12" height="12" fill="#0f172a"/>
-                        </svg>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -934,7 +911,7 @@
                 </h3>
                 
                 <!-- Simplified Explanation Box for a, o, e -->
-                <div style="background: #eff6ff; border-left: 5px solid var(--primary); padding: 14px 18px; border-radius: 6px; margin-bottom: 20px; font-size: 1.05rem;">
+                <div style="background: var(--ice-bg); border-left: 5px solid var(--royal-primary); padding: 14px 18px; border-radius: 6px; margin-bottom: 20px; font-size: 1.05rem;">
                     💡 <strong>Why can ONLY "a, o, e" stand alone without Y/W?</strong><br>
                     • <strong>a, o, e</strong> are "Big Mouth / High-Volume Vowels". They are strong and clear enough to form independent syllables by themselves without needing Y or W bodyguards! (e.g., <span class="kw-pinyin">ā</span> 啊, <span class="kw-pinyin">ò</span> 哦, <span class="kw-pinyin">è</span> 饿).<br>
                     • <strong>i, u, ü</strong> have tighter mouth shapes, so they need <strong>Y</strong> or <strong>W</strong> as sound separators to mark the start of a syllable.
@@ -945,7 +922,7 @@
                 <div style="display: flex; flex-direction: column; gap: 14px; margin: 18px 0;">
                     <!-- i Group -->
                     <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 14px 20px;">
-                        <strong style="color: var(--primary); font-size: 1.15rem;">1. Starting with "i":</strong>
+                        <strong style="color: var(--royal-primary); font-size: 1.15rem;">1. Starting with "i":</strong>
                         <div style="margin-top: 8px; font-size: 1.1rem; line-height: 1.9;">
                             • <strong>i is Alone</strong>: Add <strong>y</strong> in front &rarr; <span class="kw-pinyin">i &rarr; yi</span>, <span class="kw-pinyin">in &rarr; yin</span>, <span class="kw-pinyin">ing &rarr; ying</span><br>
                             • <strong>i Has Vowel Friends</strong>: Replace <strong>i</strong> with <strong>y</strong> &rarr; <span class="kw-pinyin">ia &rarr; ya</span>, <span class="kw-pinyin">ian &rarr; yan</span>, <span class="kw-pinyin">iou &rarr; you</span>
@@ -954,7 +931,7 @@
 
                     <!-- u Group -->
                     <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 14px 20px;">
-                        <strong style="color: var(--primary); font-size: 1.15rem;">2. Starting with "u":</strong>
+                        <strong style="color: var(--royal-primary); font-size: 1.15rem;">2. Starting with "u":</strong>
                         <div style="margin-top: 8px; font-size: 1.1rem; line-height: 1.9;">
                             • <strong>u is Alone</strong>: Add <strong>w</strong> in front &rarr; <span class="kw-pinyin">u &rarr; wu</span><br>
                             • <strong>u Has Vowel Friends</strong>: Replace <strong>u</strong> with <strong>w</strong> &rarr; <span class="kw-pinyin">ua &rarr; wa</span>, <span class="kw-pinyin">uan &rarr; wan</span>, <span class="kw-pinyin">uei &rarr; wei</span>
@@ -963,7 +940,7 @@
 
                     <!-- ü Group -->
                     <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 14px 20px;">
-                        <strong style="color: var(--primary); font-size: 1.15rem;">3. Starting with "ü":</strong>
+                        <strong style="color: var(--royal-primary); font-size: 1.15rem;">3. Starting with "ü":</strong>
                         <div style="margin-top: 8px; font-size: 1.1rem; line-height: 1.9;">
                             • Always add <strong>y</strong> in front AND drop the two dots &rarr; <span class="kw-pinyin">ü &rarr; yu</span>, <span class="kw-pinyin">üe &rarr; yue</span>, <span class="kw-pinyin">üan &rarr; yuan</span>, <span class="kw-pinyin">ün &rarr; yun</span>
                         </div>
@@ -983,7 +960,7 @@
                     <span class="page-badge">KLXHY pg 4 - 5</span>
                 </h3>
                 
-                <div style="background: #eff6ff; border-left: 5px solid var(--primary); padding: 14px 18px; border-radius: 6px; margin-bottom: 20px; font-size: 1.05rem;">
+                <div style="background: var(--ice-bg); border-left: 5px solid var(--royal-primary); padding: 14px 18px; border-radius: 6px; margin-bottom: 20px; font-size: 1.05rem;">
                     🤔 <strong>WHY do we drop the dots?</strong><br>
                     Because <strong>j, q, x</strong> NEVER combine with the plain vowel "u"! Since there is zero possibility of confusing "ü" with "u" after <strong>j, q, x</strong>, the two dots are redundant, so we drop them to make writing faster!
                 </div>
@@ -1086,7 +1063,7 @@
                 
                 <div style="display: flex; align-items: center; justify-content: center; gap: 20px; background: #f1f5f9; padding: 16px; border-radius: 10px; font-family: monospace; font-size: 1.2em; flex-wrap: wrap;">
                     <div><span style="color:#dc2626;">Tiānānmén</span> (Wrong: Read as "Tiā - nān - mén")</div>
-                    <span style="color:var(--primary); font-weight:bold; font-size:1.4em;">&rarr;</span> 
+                    <span style="color:var(--royal-primary); font-weight:bold; font-size:1.4em;">&rarr;</span> 
                     <div style="background: #fef08a; padding: 4px 12px; border-radius: 6px; border: 2px dashed #ca8a04;"><strong>Tiān'ānmén</strong> (Correct: Clear "Tian" & "an")</div>
                 </div>
             </div>
@@ -1099,8 +1076,8 @@
                 </h3>
 
                 <!-- Syllable Counting Box with Nowrap -->
-                <div style="background: #eff6ff; border: 2px solid #bfdbfe; padding: 16px 20px; border-radius: 8px; margin-bottom: 20px;">
-                    <strong style="color: #1e40af; font-size: 1.25rem;">📐 How to Count Chinese Syllables:</strong>
+                <div style="background: var(--ice-bg); border: 2px solid var(--soft-border); padding: 16px 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <strong style="color: var(--sapphire-dark); font-size: 1.25rem;">📐 How to Count Chinese Syllables:</strong>
                     <p style="margin: 8px 0 0; font-size: 1.1rem; color: #1e3a8a;">
                         In Mandarin, <strong>1 Chinese Character = 1 Spoken Syllable = 1 Pinyin Unit</strong>. Every single syllable you speak counts as 1 syllable!
                     </p>
@@ -1134,10 +1111,10 @@
             </div>
         </div>
 
-        <!-- Section 7: In-Class Exercises (Per-Question Reveal) -->
+        <!-- Section 7: Exercises (Per-Question Reveal) -->
         <div id="exercises" class="section">
             <h1>
-                <span>7. In-Class Exercises (KuaiLe Xue HanYu Practice)</span>
+                <span>7. Exercises (KuaiLe Xue HanYu Practice)</span>
                 <span class="page-badge">KLXHY pg 6 - 7</span>
             </h1>
             
@@ -1466,7 +1443,7 @@
                 </a>
             </div>
 
-            <h3 style="color: var(--primary); font-size: 1.5rem; margin-top: 40px;">🎧 Interactive Pinyin Chart Review</h3>
+            <h3 style="color: var(--sapphire-dark); font-size: 1.5rem; margin-top: 40px;">🎧 Interactive Pinyin Chart Review</h3>
             <p>Use the audio playback feature on this interactive chart to practice repeating after native speakers.</p>
             <a href="https://yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table" target="_blank" class="resource-link">
                 Open Yoyo Pinyin Chart Table
