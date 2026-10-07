@@ -441,6 +441,16 @@
             font-size: 0.9em;
             font-weight: bold;
         }
+
+        .pill-tag {
+            background: #cbd5e1;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            color: #1e293b;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -845,9 +855,9 @@
                 <div style="background: white; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 16px; margin: 15px 0; font-family: 'Andika', sans-serif;">
                     <div style="font-size: 0.95rem; font-weight: bold; color: #64748b; margin-bottom: 8px; text-transform: uppercase;">Visual Flow Diagram:</div>
                     <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1.1rem;">
-                        <div>• <span class="pill-tag">ALONE (3 Letters)</span> <span class="kw-pinyin">iou &rarr; you</span> &nbsp;|&nbsp; <span class="pill-tag">WITH INITIAL (2 Letters)</span> $x + iou = $ <span class="kw-pinyin">xiū</span></div>
-                        <div>• <span class="pill-tag">ALONE (3 Letters)</span> <span class="kw-pinyin">uei &rarr; wei</span> &nbsp;|&nbsp; <span class="pill-tag">WITH INITIAL (2 Letters)</span> $d + uei = $ <span class="kw-pinyin">duì</span></div>
-                        <div>• <span class="pill-tag">ALONE (3 Letters)</span> <span class="kw-pinyin">uen &rarr; wen</span> &nbsp;|&nbsp; <span class="pill-tag">WITH INITIAL (2 Letters)</span> $t + uen = $ <span class="kw-pinyin">tūn</span></div>
+                        <div>• <span class="pill-tag">ALONE (3 Letters)</span> <span class="kw-pinyin">iou &rarr; you</span> &nbsp;|&nbsp; <span class="pill-tag">WITH INITIAL (2 Letters)</span> x + iou = <span class="kw-pinyin">xiū</span></div>
+                        <div>• <span class="pill-tag">ALONE (3 Letters)</span> <span class="kw-pinyin">uei &rarr; wei</span> &nbsp;|&nbsp; <span class="pill-tag">WITH INITIAL (2 Letters)</span> d + uei = <span class="kw-pinyin">duì</span></div>
+                        <div>• <span class="pill-tag">ALONE (3 Letters)</span> <span class="kw-pinyin">uen &rarr; wen</span> &nbsp;|&nbsp; <span class="pill-tag">WITH INITIAL (2 Letters)</span> t + uen = <span class="kw-pinyin">tūn</span></div>
                     </div>
                 </div>
 
@@ -977,9 +987,9 @@
                 <div style="background: var(--ice-bg); border: 1px solid var(--soft-border); padding: 16px 20px; border-radius: 8px; margin-top: 15px; font-size: 1.05rem;">
                     ⚡ <strong>The Space-Saving Rule ("Middle Letter Squeezed Out"):</strong><br>
                     When preceded by a consonant initial, 3 finals drop their middle vowel to save space:<br>
-                    • <code>iou &rarr; -iu</code> (e.g. $x + iou = $ <span class="kw-pinyin">xiū</span> | <span style="color:#dc2626; font-weight:bold;">xiou ❌</span>)<br>
-                    • <code>uei &rarr; -ui</code> (e.g. $d + uei = $ <span class="kw-pinyin">duì</span> | <span style="color:#dc2626; font-weight:bold;">duei ❌</span>)<br>
-                    • <code>uen &rarr; -un</code> (e.g. $t + uen = $ <span class="kw-pinyin">tūn</span> | <span style="color:#dc2626; font-weight:bold;">tuen ❌</span>)
+                    • <code>iou &rarr; -iu</code> (e.g. x + iou = <span class="kw-pinyin">xiū</span> | <span style="color:#dc2626; font-weight:bold;">xiou ❌</span>)<br>
+                    • <code>uei &rarr; -ui</code> (e.g. d + uei = <span class="kw-pinyin">duì</span> | <span style="color:#dc2626; font-weight:bold;">duei ❌</span>)<br>
+                    • <code>uen &rarr; -un</code> (e.g. t + uen = <span class="kw-pinyin">tūn</span> | <span style="color:#dc2626; font-weight:bold;">tuen ❌</span>)
                 </div>
             </div>
 
@@ -1030,7 +1040,7 @@
 
                 <div style="background: #fff1f2; border-left: 5px solid #e11d48; padding: 14px 18px; border-radius: 6px; font-size: 1.05rem; margin-top: 15px;">
                     ⚠️ <strong>WHY do we KEEP the dots for n & l?</strong><br>
-                    Because <strong>n</strong> and <strong>l</strong> CAN combine with BOTH "u" and "ü"! We must keep the dots to distinguish them (e.g., l + ü = lǚ green vs l + u = lǔ land).
+                    Because <strong>n</strong> and <strong>l</strong> CAN combine with BOTH "u" and "ü"! We must keep the dots to distinguish them (e.g., l + ü = lǜ green vs l + u = lù land).
                 </div>
             </div>
 
@@ -1155,7 +1165,7 @@
                     <span class="page-badge">KLXHY pg 6</span>
                 </h3>
                 
-                <p><strong>1. Identify the Initials and Finals:</strong> Identify the initial consonant and final vowel for each syllable below:</p>
+                <p><strong>1. Identify the Initials and Finals:</strong> Identify the initial consonant and final vowel for each syllable below (Circle the initial, underline the final):</p>
                 
                 <div class="interactive-q-item">
                     <div class="q-header">
@@ -1431,27 +1441,27 @@
                 <p>Correct tone numbers into tone marks, apply capitalization, and fix spacing/word boundary formatting:</p>
 
                 <div class="interactive-q-item">
-                    <div class="q-header"><span class="q-prompt">1. lin2 na4 shi4 wo3 de peng2you.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e1')">Answer</button></div>
+                    <div class="q-header"><span class="q-prompt">1. <u>lin2</u> <u>na4</u> shi4 wo3 de peng2you.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e1')">Answer</button></div>
                     <div id="ex-e1" class="answer-box">Lín Nà shì wǒ de péngyou.</div>
                 </div>
 
                 <div class="interactive-q-item">
-                    <div class="q-header"><span class="q-prompt">2. ta1 jiao4 wang2 xiao3yun2.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e2')">Answer</button></div>
+                    <div class="q-header"><span class="q-prompt">2. ta1 jiao4 <u>wang2</u> <u>xiao3yun2</u>.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e2')">Answer</button></div>
                     <div id="ex-e2" class="answer-box">Tā jiào Wáng Xiǎoyún.</div>
                 </div>
 
                 <div class="interactive-q-item">
-                    <div class="q-header"><span class="q-prompt">3. chen2 lao3shi1 hen3 mang2.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e3')">Answer</button></div>
+                    <div class="q-header"><span class="q-prompt">3. <u>chen2</u> lao3shi1 hen3 mang2.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e3')">Answer</button></div>
                     <div id="ex-e3" class="answer-box">Chén lǎoshī hěn máng.</div>
                 </div>
 
                 <div class="interactive-q-item">
-                    <div class="q-header"><span class="q-prompt">4. wo3men xi3huan xue2xi2 han4yu3.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e4')">Answer</button></div>
+                    <div class="q-header"><span class="q-prompt">4. wo3men xi3huan xue2xi2 <u>han4yu3</u>.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e4')">Answer</button></div>
                     <div id="ex-e4" class="answer-box">Wǒmen xǐhuan xuéxí Hànyǔ.</div>
                 </div>
 
                 <div class="interactive-q-item">
-                    <div class="q-header"><span class="q-prompt">5. ni3men dou1 bu2shi4 zhong1guo2 ren2.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e5')">Answer</button></div>
+                    <div class="q-header"><span class="q-prompt">5. ni3men dou1 bu2shi4 <u>zhong1guo2</u> ren2.</span> <button class="reveal-btn" onclick="toggleAnswer('ex-e5')">Answer</button></div>
                     <div id="ex-e5" class="answer-box">Nǐmen dōu búshì Zhōngguó rén.</div>
                 </div>
             </div>
